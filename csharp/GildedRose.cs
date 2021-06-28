@@ -24,45 +24,23 @@ namespace csharp
                 }
             }
         }
-
-        private static bool HasExpired(Item item)
-        {
-            return item.SellIn < 0;
-        }
-
+        
         private static void UpdateExpired(Item item)
         {
-            if (item.Name != "Aged Brie")
-            {
-                if (item.Name != "Backstage passes to a TAFKAL80ETC concert")
-                {
-                    if (item.Quality > 0)
-                    {
-                        if (item.Name != "Sulfuras, Hand of Ragnaros")
-                        {
-                            item.Quality = item.Quality - 1;
-                        }
-                    }
-                }
-                else
-                {
-                    item.Quality = item.Quality - item.Quality;
-                }
-            }
-            else
+            if (item.Name == "Aged Brie")
             {
                 IncrementQuality(item);
             }
-        }
-
-        private static void IncrementQuality(Item item)
-        {
-            if (item.Quality < 50)
+            else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
             {
-                item.Quality = item.Quality + 1;
+                item.Quality = item.Quality - item.Quality;
             }
+            else if (item.Name == "Sulfuras, Hand of Ragnaros") return;
+            
+            else
+                DecrementQuality(item);
         }
-
+        
         private static void UpdateSellIn(Item item)
         {
             if (item.Name != "Sulfuras, Hand of Ragnaros")
@@ -73,32 +51,53 @@ namespace csharp
 
         private static void UpdateItemQuality(Item item)
         {
-            if (item.Name != "Aged Brie" && item.Name != "Backstage passes to a TAFKAL80ETC concert")
-            {
-                if (item.Quality > 0)
-                {
-                    if (item.Name != "Sulfuras, Hand of Ragnaros")
-                    {
-                        item.Quality = item.Quality - 1;
-                    }
-                }
-            }
-            else
+            if (item.Name == "Aged Brie")
             {
                 IncrementQuality(item);
+            }
 
-                if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
+            else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
+            {
+                IncrementQuality(item);
+                if (item.SellIn < 11)
                 {
-                    if (item.SellIn < 11)
-                    {
-                        IncrementQuality(item);
-                    }
-
-                    if (item.SellIn < 6)
-                    {
-                        IncrementQuality(item);
-                    }
+                    IncrementQuality(item);
                 }
+
+                if (item.SellIn < 6)
+                {
+                    IncrementQuality(item);
+                }
+            }
+            
+            else
+            {
+                if (item.Quality <= 0) return;
+                if (item.Name != "Sulfuras, Hand of Ragnaros")
+                {
+                    item.Quality = item.Quality - 1;
+                }
+            }
+        }
+
+        private static bool HasExpired(Item item)
+        {
+            return item.SellIn < 0;
+        }
+
+        private static void IncrementQuality(Item item)
+        {
+            if (item.Quality < 50)
+            {
+                item.Quality = item.Quality + 1;
+            }
+        }
+
+        private static void DecrementQuality(Item item)
+        {
+            if (item.Quality > 0)
+            {
+                item.Quality = item.Quality - 1;
             }
         }
     }
