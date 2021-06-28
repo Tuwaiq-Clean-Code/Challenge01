@@ -1,4 +1,4 @@
-# Challenge 01
+# Challenge 01 Solution
 
 ## *Step#1*
 
@@ -12,22 +12,36 @@
 #### find the code Smell in the function `UpdateQuality()` and Refactor the function.
 ##### your repo should contain a README file and the refactored function.
 
-- README file contains:
+<br/>
 
-Code Smell:
+<p align="center">
+  <a href="https://bitchunk.co/" target="_blank"><img src="https://raw.githubusercontent.com/YounesAlturkey/bitchunk/main/frontend/src/assets/img/demo.gif" alt="demo"/></a>
+</p>
 
-Definition: 
+
+
+Code Smells and Definitions:
+- Combinatorial Explosion ➝ spaghetti code as we keep going deeper
+- Oddball Solution ➝ inconsistent solution to the same issue
+- Long Method ➝ unjustified length of method
+- Inconsistency ➝ overall inconsistency throughout the method
+- Duplicate Code ➝ a lot of copy paste
 
 Solution:
+- Refactor code
+- Remove duplicate code
+- Resolve inconsistencies
+- Cut number of lines by ~50%
 
 
-> p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
+<div align="right">
 
----
+## معلومات المتدرب
 
+المدربة في العتيبي
 
-**recourse**: 
-- https://github.com/NotMyself/GildedRose
-- http://iamnotmyself.com/2011/02/14/refactor-this-the-gilded-rose-kata/
+المتدرب يونس التركي
 
-> please make sure you fork this repo and submit your code as PR.🦾
+المجموعة البحر الاحمر
+
+</div>
