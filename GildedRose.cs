@@ -48,7 +48,7 @@ namespace csharp
                     }
                     else
                     {
-                        if (item.Quality < 50)
+                        if (isBelowFifty(item.Quality))
                             item.Quality = item.Quality + 1;
                     }
                 }
