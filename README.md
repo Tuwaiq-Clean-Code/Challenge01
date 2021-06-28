@@ -15,7 +15,7 @@
 <br/>
 
 <p align="center">
-  <a href="https://bitchunk.co/" target="_blank"><img src="https://raw.githubusercontent.com/YounesAlturkey/bitchunk/main/frontend/src/assets/img/demo.gif" alt="demo"/></a>
+  <img src="https://raw.githubusercontent.com/YounesAlturkey/Challenge01/main/demo.png" alt="demo"/>
 </p>
 
 
