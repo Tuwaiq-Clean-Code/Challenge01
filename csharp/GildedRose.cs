@@ -1,89 +1,66 @@
 ﻿using System.Collections.Generic;
-
 namespace csharp
 {
     public class GildedRose
     {
         IList<Item> Items;
-        public GildedRose(IList<Item> Items)
-        {
-            this.Items = Items;
-        }
+        public GildedRose(IList<Item> Items)=>this.Items = Items;
 
         public void UpdateQuality()
         {
-            for (var i = 0; i < Items.Count; i++)
+            foreach (var item in Items)
             {
-                if (Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
+                if (isValidName(item.Name) && IsGreaterThanZero(item.Quality))
                 {
-                    if (Items[i].Quality > 0)
-                    {
-                        if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                        {
-                            Items[i].Quality = Items[i].Quality - 1;
-                        }
-                    }
+                    item.Quality--;
                 }
                 else
                 {
-                    if (Items[i].Quality < 50)
+                    if (isLessThanFifty(item.Quality))
                     {
-                        Items[i].Quality = Items[i].Quality + 1;
-
-                        if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
+                        item.Quality++;
+                        if (isLessThanFifty(item.Quality) && item.Name == "Backstage passes to a TAFKAL80ETC concert")
                         {
-                            if (Items[i].SellIn < 11)
-                            {
-                                if (Items[i].Quality < 50)
-                                {
-                                    Items[i].Quality = Items[i].Quality + 1;
-                                }
-                            }
-
-                            if (Items[i].SellIn < 6)
-                            {
-                                if (Items[i].Quality < 50)
-                                {
-                                    Items[i].Quality = Items[i].Quality + 1;
-                                }
-                            }
+                            if (item.SellIn < 11)
+                                item.Quality++;
                         }
                     }
                 }
-
-                if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
+                if (item.Name != "Sulfuras, Hand of Ragnaros")
+                    item.SellIn--;
+                if (item.SellIn < 0)
                 {
-                    Items[i].SellIn = Items[i].SellIn - 1;
-                }
-
-                if (Items[i].SellIn < 0)
-                {
-                    if (Items[i].Name != "Aged Brie")
+                    if (item.Name != "Aged Brie")
                     {
-                        if (Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
-                        {
-                            if (Items[i].Quality > 0)
-                            {
-                                if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                                {
-                                    Items[i].Quality = Items[i].Quality - 1;
-                                }
-                            }
-                        }
+                        if (isValidName(item.Name) && IsGreaterThanZero(item.Quality))
+                            item.Quality--;
                         else
-                        {
-                            Items[i].Quality = Items[i].Quality - Items[i].Quality;
-                        }
+                            item.Quality -= item.Quality;
                     }
                     else
                     {
-                        if (Items[i].Quality < 50)
-                        {
-                            Items[i].Quality = Items[i].Quality + 1;
-                        }
+                        if (isLessThanFifty(item.Quality))
+                            item.Quality++;
                     }
                 }
             }
         }
+
+        private bool isValidName(string name)
+        {
+            return name != "Aged Brie" && name != "Backstage passes to a TAFKAL80ETC concert"
+            && name != "Sulfuras, Hand of Ragnaros";
+        }
+        private bool IsGreaterThanZero(int number)
+        {
+            return number > 0;
+        }
+        private bool isLessThanFifty(int number)
+        {
+            return number < 50;
+        }
+
+
+        
     }
 }
