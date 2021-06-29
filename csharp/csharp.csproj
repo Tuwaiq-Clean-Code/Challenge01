@@ -67,6 +67,11 @@
     <Compile Include="GildedRose.cs" />
     <Compile Include="GildedRoseTest.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="ItemCategory\AgedBrie.cs" />
+    <Compile Include="ItemCategory\BackstagePass.cs" />
+    <Compile Include="ItemCategory\Conjured.cs" />
+    <Compile Include="ItemCategory\ItemCategory.cs" />
+    <Compile Include="ItemCategory\Sulfuras.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
