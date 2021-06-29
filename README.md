@@ -17,7 +17,7 @@ Many if statement and many repetition
 ### Definition: 
 Is any characteristic in the source code of a program that possibly indicates a deeper problem
 ### Solution:
-using function شnd call it without repetition
+using function and call it without repetition
 
 ## Aurthor
 ### Fatimah alqhtany 
