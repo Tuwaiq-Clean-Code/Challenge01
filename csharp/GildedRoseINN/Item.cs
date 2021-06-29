@@ -1,4 +1,4 @@
-﻿namespace csharp
+﻿namespace csharp.GildedRoseINN
 {
     public class Item
     {
