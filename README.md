@@ -1,29 +1,42 @@
 # Challenge 01
 
-## *Step#1*
+## Code Smell & Definitions
+code smell: not bugs or errors which decrease the quality of code.
 
-#### Go to **csharp**  -> **GildedRose.cs** -> `UpdateQuality()` function 
-
-
-## *Step#2*
-
-### **Challenge Requirement**
-
-#### find the code Smell in the function `UpdateQuality()` and Refactor the function.
-##### your repo should contain a README file and the refactored function.
-
-- README file contains:
-
-Code Smell:
-
-Definition: 
-
-Solution:
+## Application Level Smells
 
 
-> p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
+|  Application Smell   | Definition      |
+| ---------------------- |:-------------:|
+|Duplicate Code| Similar code in more than one location. |
+| Shotgun Surgery | One change requires altering many different classes.|
+| Contrived Complexity | Using complex design patterns where a simpler uncomplicated design could be used. |
+<br/>
 
----
+## Class Level Smells
+
+|  Class Smell   | Definition       |
+| ----------------- |:-------------:|
+|Large Class| Class trying to do too much and has too many instance variables |
+| Middle Man | Class with lots of methods delegated to other class|
+| Cyclomatic Complexity	 | Class with too many branches and loops |
+<br/>
+
+## Method Level Smells
+<br/>
+
+|  Method Smell   | Definition      |
+| ----------------- |:-------------:|
+|Long Method	| Long procedures that are hard to understand
+| Too Many Parameters | CA very long list of parameters|
+| God Line	 | An excessively long line of code|
+
+<br/>
+
+## Solutions 
+<p>1- Refactor code</p>
+<p>2- Remove duplicate code</p>
+
 
 
 **recourse**: 
