@@ -12,11 +12,11 @@
 #### find the code Smell in the function `UpdateQuality()` and Refactor the function.
 
 
-Code Smell:
+### Code Smell:
 Many if statement and many repetition
-Definition: 
+### Definition: 
 Is any characteristic in the source code of a program that possibly indicates a deeper problem
-Solution:
+### Solution:
 using function شnd call it without repetition
 
 
