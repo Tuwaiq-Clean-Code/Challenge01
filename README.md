@@ -1,33 +1,23 @@
-# Challenge 01
+## Code smells in the code:
 
-## *Step#1*
-
-#### Go to **csharp**  -> **GildedRose.cs** -> `UpdateQuality()` function 
-
-
-## *Step#2*
-
-### **Challenge Requirement**
-
-#### find the code Smell in the function `UpdateQuality()` and Refactor the function.
-##### your repo should contain a README file and the refactored function.
-
-- README file contains:
-
-Code Smell:
+1. Long Method.
 
 Definition: 
+A method contains too many lines of code.
 
 Solution:
+Take this code and put it in a new method.
+ 
+2. Duplicate Code.
+
+Definition: 
+Two code fragments look almost identical.
+
+Solution:
+Use Extract Method. Move duplicated code to a separate new method (or function) and replace the old code with a call to the method.
+ 
+<hr>
+
+### Name: Amal Fahad Al-Aqel. 
 
 
-> p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
-
----
-
-
-**recourse**: 
-- https://github.com/NotMyself/GildedRose
-- http://iamnotmyself.com/2011/02/14/refactor-this-the-gilded-rose-kata/
-
-> please make sure you fork this repo and submit your code as PR.🦾
