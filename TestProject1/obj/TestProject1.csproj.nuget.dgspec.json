@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repos\\ConsoleApp8\\TestProject1\\TestProject1.csproj": {}
+    "D:\\New folder (2)\\challenge01\\TestProject1\\TestProject1.csproj": {}
   },
   "projects": {
-    "D:\\repos\\ConsoleApp8\\ConsoleApp8\\ConsoleApp8.csproj": {
+    "D:\\New folder (2)\\challenge01\\ConsoleApp8\\ConsoleApp8.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\ConsoleApp8\\ConsoleApp8\\ConsoleApp8.csproj",
+        "projectUniqueName": "D:\\New folder (2)\\challenge01\\ConsoleApp8\\ConsoleApp8.csproj",
         "projectName": "ConsoleApp8",
-        "projectPath": "D:\\repos\\ConsoleApp8\\ConsoleApp8\\ConsoleApp8.csproj",
+        "projectPath": "D:\\New folder (2)\\challenge01\\ConsoleApp8\\ConsoleApp8.csproj",
         "packagesPath": "C:\\Users\\anas\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\ConsoleApp8\\ConsoleApp8\\obj\\",
+        "outputPath": "D:\\New folder (2)\\challenge01\\ConsoleApp8\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -61,14 +61,14 @@
         }
       }
     },
-    "D:\\repos\\ConsoleApp8\\TestProject1\\TestProject1.csproj": {
+    "D:\\New folder (2)\\challenge01\\TestProject1\\TestProject1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\ConsoleApp8\\TestProject1\\TestProject1.csproj",
+        "projectUniqueName": "D:\\New folder (2)\\challenge01\\TestProject1\\TestProject1.csproj",
         "projectName": "TestProject1",
-        "projectPath": "D:\\repos\\ConsoleApp8\\TestProject1\\TestProject1.csproj",
+        "projectPath": "D:\\New folder (2)\\challenge01\\TestProject1\\TestProject1.csproj",
         "packagesPath": "C:\\Users\\anas\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\ConsoleApp8\\TestProject1\\obj\\",
+        "outputPath": "D:\\New folder (2)\\challenge01\\TestProject1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -88,8 +88,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\repos\\ConsoleApp8\\ConsoleApp8\\ConsoleApp8.csproj": {
-                "projectPath": "D:\\repos\\ConsoleApp8\\ConsoleApp8\\ConsoleApp8.csproj"
+              "D:\\New folder (2)\\challenge01\\ConsoleApp8\\ConsoleApp8.csproj": {
+                "projectPath": "D:\\New folder (2)\\challenge01\\ConsoleApp8\\ConsoleApp8.csproj"
               }
             }
           }

@@ -44,9 +44,9 @@ namespace ConsoleApp8
         {
             return item.Name == name;
         }
-        public bool hasNoneOf(Item item, string FirstName, string SecondName, string ThirdName)
+        public bool hasAnyName(Item item, string FirstName, string SecondName, string ThirdName)
         {
-            return (item.Name != FirstName && item.Name != SecondName && item.Name != ThirdName);
+            return (item.Name == FirstName || item.Name == SecondName || item.Name == ThirdName);
         }
 
         public void ChangeQualityWithDefaultNameBehavior(Item item)
@@ -57,7 +57,7 @@ namespace ConsoleApp8
             }
 
             if (
-                hasNoneOf(item,
+                !hasAnyName(item,
                 "Sulfuras, Hand of Ragnaros",
                 "Backstage passes to a TAFKAL80ETC concert",
                 "Aged Brie")
@@ -89,7 +89,7 @@ namespace ConsoleApp8
                     }
                 }
 
-                if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
+                if (!hasName(Items[i], "Sulfuras, Hand of Ragnaros"))
                 {
                     Items[i].SellIn = Items[i].SellIn - 1;
                 }

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repos\\ConsoleApp8\\ConsoleApp8\\ConsoleApp8.csproj",
+      "projectUniqueName": "D:\\New folder (2)\\challenge01\\ConsoleApp8\\ConsoleApp8.csproj",
       "projectName": "ConsoleApp8",
-      "projectPath": "D:\\repos\\ConsoleApp8\\ConsoleApp8\\ConsoleApp8.csproj",
+      "projectPath": "D:\\New folder (2)\\challenge01\\ConsoleApp8\\ConsoleApp8.csproj",
       "packagesPath": "C:\\Users\\anas\\.nuget\\packages\\",
-      "outputPath": "D:\\repos\\ConsoleApp8\\ConsoleApp8\\obj\\",
+      "outputPath": "D:\\New folder (2)\\challenge01\\ConsoleApp8\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
