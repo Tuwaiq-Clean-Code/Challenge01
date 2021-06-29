@@ -14,6 +14,7 @@ Two code fragments look almost identical.
 Solution:
 Use Extract Method. Move duplicated code to a separate new method (or function) and replace the old code with a call to the method.
  
+### Name: Amal Fahad Al-Aqel
 
 
 ---
