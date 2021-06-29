@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 
 namespace csharp
 {
@@ -14,22 +15,57 @@ namespace csharp
         {
             foreach (var item in Items)
             {
-                UpdateItemQuality(item);
-
-                UpdateSellIn(item);
-
-                if (HasExpired(item))
-                {
-                    UpdateExpired(item);
-                }
+                ItemCategory category = Categorize(item);
+                UpdateItem(item, category);
             }
         }
         
-        private static void UpdateExpired(Item item)
+        public void UpdateItem(Item item, ItemCategory category)
+        {
+            category.UpdateItemQuality(item);
+
+            category.UpdateSellIn(item);
+
+            if (HasExpired(item))
+            {
+                category.UpdateExpired(item);
+            }
+        }
+
+        private ItemCategory Categorize(Item item)
+        {
+            return null;
+        }
+
+        private static bool HasExpired(Item item)
+        {
+            return item.SellIn < 0;
+        }
+    }
+
+    public class ItemCategory
+    {
+        public void IncrementQuality(Item item)
+        {
+            if (item.Quality < 50)
+            {
+                item.Quality = item.Quality + 1;
+            }
+        }
+
+        public void DecrementQuality(Item item)
+        {
+            if (item.Quality > 0)
+            {
+                item.Quality = item.Quality - 1;
+            }
+        }
+
+        public void UpdateExpired(Item item)
         {
             if (item.Name == "Aged Brie")
             {
-                IncrementQuality(item);
+                this.IncrementQuality(item);
             }
             else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
             {
@@ -38,10 +74,10 @@ namespace csharp
             else if (item.Name == "Sulfuras, Hand of Ragnaros") return;
             
             else
-                DecrementQuality(item);
+                this.DecrementQuality(item);
         }
-        
-        private static void UpdateSellIn(Item item)
+
+        public void UpdateSellIn(Item item)
         {
             if (item.Name != "Sulfuras, Hand of Ragnaros")
             {
@@ -49,24 +85,24 @@ namespace csharp
             }
         }
 
-        private static void UpdateItemQuality(Item item)
+        public void UpdateItemQuality(Item item)
         {
             if (item.Name == "Aged Brie")
             {
-                IncrementQuality(item);
+                this.IncrementQuality(item);
             }
 
             else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
             {
-                IncrementQuality(item);
+                this.IncrementQuality(item);
                 if (item.SellIn < 11)
                 {
-                    IncrementQuality(item);
+                    this.IncrementQuality(item);
                 }
 
                 if (item.SellIn < 6)
                 {
-                    IncrementQuality(item);
+                    this.IncrementQuality(item);
                 }
             }
             
@@ -77,27 +113,6 @@ namespace csharp
                 {
                     item.Quality = item.Quality - 1;
                 }
-            }
-        }
-
-        private static bool HasExpired(Item item)
-        {
-            return item.SellIn < 0;
-        }
-
-        private static void IncrementQuality(Item item)
-        {
-            if (item.Quality < 50)
-            {
-                item.Quality = item.Quality + 1;
-            }
-        }
-
-        private static void DecrementQuality(Item item)
-        {
-            if (item.Quality > 0)
-            {
-                item.Quality = item.Quality - 1;
             }
         }
     }
