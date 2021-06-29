@@ -19,7 +19,7 @@ Is any characteristic in the source code of a program that possibly indicates a 
 ### Solution:
 using function شnd call it without repetition
 
-
-### fatimah alqhtany 
+## Aurthor
+### Fatimah alqhtany 
 
 <img src="https://e.top4top.io/p_20060xpwx1.png"/>
