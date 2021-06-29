@@ -6,6 +6,7 @@ namespace csharp
     public class GildedRose
     {
         IList<Item> Items;
+
         public GildedRose(IList<Item> Items)
         {
             this.Items = Items;
@@ -16,103 +17,155 @@ namespace csharp
             foreach (var item in Items)
             {
                 ItemCategory category = Categorize(item);
-                UpdateItem(item, category);
-            }
-        }
-        
-        public void UpdateItem(Item item, ItemCategory category)
-        {
-            category.UpdateItemQuality(item);
-
-            category.UpdateSellIn(item);
-
-            if (HasExpired(item))
-            {
-                category.UpdateExpired(item);
+                category.UpdateItem(item);
             }
         }
 
         private ItemCategory Categorize(Item item)
         {
-            return null;
-        }
+            if (item.Name == "Sulfuras, Hand of Ragnaros")
+            {
+                return new Sulfuras();
+            }
 
-        private static bool HasExpired(Item item)
-        {
-            return item.SellIn < 0;
+            if (item.Name == "Aged Brie")
+            {
+                return new AgedBrie();
+            }
+
+            if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
+            {
+                return new BackstagePass();
+            }
+
+            if (item.Name == "Conjured Mana Cake")
+            {
+                return new Conjured();
+            }
+
+            return new ItemCategory();
         }
     }
 
-    public class ItemCategory
+    class Sulfuras : ItemCategory
     {
-        public void IncrementQuality(Item item)
+        protected override void UpdateExpired(Item item)
+        {
+        }
+
+        protected override void UpdateItemQuality(Item item)
+        {
+        }
+
+        protected override void UpdateSellIn(Item item)
+        {
+        }
+    }
+
+    class AgedBrie : ItemCategory
+    {
+        protected override void UpdateExpired(Item item)
+        {
+            IncrementQuality(item);
+        }
+
+        protected override void UpdateItemQuality(Item item)
+        {
+            IncrementQuality(item);
+        }
+    }
+
+    class BackstagePass : ItemCategory
+    {
+        protected override void UpdateExpired(Item item)
+        {
+            item.Quality -= item.Quality;
+        }
+
+        protected override void UpdateItemQuality(Item item)
+        {
+            IncrementQuality(item);
+            if (item.SellIn < 11)
+            {
+                IncrementQuality(item);
+            }
+
+            if (item.SellIn < 6)
+            {
+                IncrementQuality(item);
+            }
+        }
+
+        protected override void UpdateSellIn(Item item)
+        {
+            item.SellIn -= 1;
+        }
+    }
+
+
+    class Conjured : ItemCategory
+    {
+        protected override void UpdateExpired(Item item)
+        {
+            DecrementQuality(item);
+            DecrementQuality(item);
+        }
+
+        protected override void UpdateItemQuality(Item item)
+        {
+            DecrementQuality(item);
+            DecrementQuality(item);
+        }
+    }
+
+
+    class ItemCategory
+    {
+        private bool HasExpired(Item item)
+        {
+            return item.SellIn < 0;
+        }
+
+        protected static void IncrementQuality(Item item)
         {
             if (item.Quality < 50)
             {
-                item.Quality = item.Quality + 1;
+                item.Quality += 1;
             }
         }
 
-        public void DecrementQuality(Item item)
+        protected static void DecrementQuality(Item item)
         {
             if (item.Quality > 0)
             {
-                item.Quality = item.Quality - 1;
+                item.Quality -= 1;
             }
         }
 
-        public void UpdateExpired(Item item)
+        protected virtual void UpdateExpired(Item item)
         {
-            if (item.Name == "Aged Brie")
-            {
-                this.IncrementQuality(item);
-            }
-            else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
-            {
-                item.Quality = item.Quality - item.Quality;
-            }
-            else if (item.Name == "Sulfuras, Hand of Ragnaros") return;
-            
-            else
-                this.DecrementQuality(item);
+            DecrementQuality(item);
         }
 
-        public void UpdateSellIn(Item item)
+        protected virtual void UpdateItemQuality(Item item)
         {
-            if (item.Name != "Sulfuras, Hand of Ragnaros")
-            {
-                item.SellIn = item.SellIn - 1;
-            }
+            DecrementQuality(item);
         }
 
-        public void UpdateItemQuality(Item item)
+        protected virtual void UpdateSellIn(Item item)
         {
-            if (item.Name == "Aged Brie")
-            {
-                this.IncrementQuality(item);
-            }
+            item.SellIn -= 1;
+        }
 
-            else if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
-            {
-                this.IncrementQuality(item);
-                if (item.SellIn < 11)
-                {
-                    this.IncrementQuality(item);
-                }
+        public void UpdateItem(Item item)
+        {
+            this.UpdateItemQuality(item);
 
-                if (item.SellIn < 6)
-                {
-                    this.IncrementQuality(item);
-                }
-            }
-            
-            else
+            this.UpdateSellIn(item);
+
+            if (HasExpired(item))
             {
-                if (item.Quality <= 0) return;
-                if (item.Name != "Sulfuras, Hand of Ragnaros")
-                {
-                    item.Quality = item.Quality - 1;
-                }
+                this.UpdateExpired(item);
             }
         }
     }
