@@ -10,24 +10,16 @@
 ### **Challenge Requirement**
 
 #### find the code Smell in the function `UpdateQuality()` and Refactor the function.
-##### your repo should contain a README file and the refactored function.
-
-- README file contains:
-
-Code Smell:
-
-Definition: 
-
-Solution:
 
 
-> p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
+### Code Smell:
+Many if statement and many repetition
+### Definition: 
+Is any characteristic in the source code of a program that possibly indicates a deeper problem
+### Solution:
+using function and call it without repetition
 
----
+## Aurthor
+### Fatimah alqhtany 
 
-
-**recourse**: 
-- https://github.com/NotMyself/GildedRose
-- http://iamnotmyself.com/2011/02/14/refactor-this-the-gilded-rose-kata/
-
-> please make sure you fork this repo and submit your code as PR.🦾
+<img src="https://e.top4top.io/p_20060xpwx1.png"/>
