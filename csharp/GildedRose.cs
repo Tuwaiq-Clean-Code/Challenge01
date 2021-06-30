@@ -45,10 +45,6 @@ namespace csharp
                     Items[i].SellIn = Items[i].SellIn - 1;
                 }
 
-
-
-
-
                 if (Items[i].SellIn < 0)
                 {
                     if (Items[i].Name != "Aged Brie")
