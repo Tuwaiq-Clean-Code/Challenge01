@@ -75,12 +75,9 @@ namespace csharp
 
 		private void DecreaseQuality(Item item)
 		{
-            if (item.Quality > 0)
+            if (item.Quality > 0 && item.Name != "Sulfuras, Hand of Ragnaros")
             {
-                if (item.Name != "Sulfuras, Hand of Ragnaros")
-                {
-                    item.Quality = item.Quality - 1;
-                }
+                item.Quality = item.Quality - 1;
             }
         }
 	}
