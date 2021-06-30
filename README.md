@@ -1,29 +1,51 @@
+
+
+![Tuwaiq](https://i.ibb.co/SV2BSn5/tuwaiq.png)
+----
+
+<br/>
+
+
 # Challenge 01
 
-## *Step#1*
 
-#### Go to **csharp**  -> **GildedRose.cs** -> `UpdateQuality()` function 
+## Code Smell:
 
+### 1- 
 
-## *Step#2*
+<img src = "1Before.png" />
 
-### **Challenge Requirement**
-
-#### find the code Smell in the function `UpdateQuality()` and Refactor the function.
-##### your repo should contain a README file and the refactored function.
-
-- README file contains:
-
-Code Smell:
-
+### 2- 
+<img src = "2Before.png" />
 Definition: 
 
-Solution:
+- Duplicated Code and Logic: 
+Duplicated code is considered one of the worse code smells. Beyond blatant copy paste, there are subtle duplications like parallel inheritance hierarchies and repetitive code structures.
+Why it’s bad? Makes code more difficult to maintain.
+- Long Method:
+Long code components take time to read and fully understand. Why it’s bad? Hurts code readability and reusability.
 
 
-> p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
+## Solution:
 
----
+Delete unnecessary if statement and aggregate all items' names in an array, and compare just one time.
+
+
+### 1- 
+
+<img src = "1After.png" />
+
+### 2- 
+<img src = "2After.png" />
+
+## Output:
+<img src="Output.png" />
+
+<hr/>
+Author:
+Samirah Alhusayni
+
+
 
 
 **recourse**: 
