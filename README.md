@@ -14,11 +14,23 @@
 
 - README file contains:
 
-Code Smell:
+Code Smell: Long Method
 
-Definition: 
+Definition: Too much unnecessary code in a method
 
-Solution:
+Solution: Extract functions and remove unnecessary code
+
+Code Smell: Duplicate Code
+
+Definition: A piece of code that is repeatedly used
+
+Solution: Extract as a function
+
+Code Smell: Arrow Code
+
+Definition: Deep nested ifs
+
+Solution: Combine conditions in a single 'if' if possible 
 
 
 > p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
