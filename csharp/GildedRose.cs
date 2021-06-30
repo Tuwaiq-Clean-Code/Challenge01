@@ -9,68 +9,79 @@ namespace csharp
         {
             this.Items = Items;
         }
-
         public bool ValidateName(string name)
         {
             return (name != "Aged Brie" && name != "Backstage passes to a TAFKAL80ETC concert" && name != "Sulfuras, Hand of Ragnaros");
         }
+        public bool isLessThan50(Item item)
+        {
+            return item.Quality < 50;
+        }
+
+
+        public bool isGreaterThanZero(Item item)
+        {
+            return item.Quality > 0;
+        }
+
 
         public void UpdateQuality()
         {
-            for (var i = 0; i < Items.Count; i++)
+            foreach (var item in Items)
             {
-                if (ValidateName(Items[i].Name) && Items[i].Quality > 0)
+                if (ValidateName(item.Name) && isGreaterThanZero(item))
                 {
-                    Items[i].Quality--;
+                    item.Quality--;
                 }
                 else
                 {
-                    if (Items[i].Quality < 50)
+                    if (isLessThan50(item))
                     {
-                        Items[i].Quality++;
+                        item.Quality++;
 
-                        if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert" && Items[i].Quality < 50)
+                        if (item.Name == "Backstage passes to a TAFKAL80ETC concert" && isLessThan50(item))
                         {
-                            if (Items[i].SellIn < 11)
+                            if (item.SellIn < 11)
                             {
-                                Items[i].Quality++;
+                                item.Quality++;
                             }
-                            if (Items[i].SellIn < 6)
+                            if (item.SellIn < 6)
                             {
-                                Items[i].Quality++;
+                                item.Quality++;
                             }
                         }
                     }
                 }
 
-                if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
+                if (item.Name != "Sulfuras, Hand of Ragnaros")
                 {
-                    Items[i].SellIn--;
+                    item.SellIn--;
                 }
 
-                if (Items[i].SellIn < 0)
+                if (item.SellIn < 0)
                 {
-                    if (Items[i].Name != "Aged Brie")
+                    if (item.Name != "Aged Brie")
                     {
-                        if (Items[i].Name != "Backstage passes to a TAFKAL80ETC concert" && Items[i].Quality > 0)
+                        if (item.Name != "Backstage passes to a TAFKAL80ETC concert" && isGreaterThanZero(item))
                         {
-                            if (ValidateName(Items[i].Name))
+                            if (ValidateName(item.Name))
                             {
-                                Items[i].Quality--;
+                                item.Quality--;
                             }
                         }
                         else
                         {
-                            Items[i].Quality -= Items[i].Quality;
+                            item.Quality -= item.Quality;
                         }
                     }
-                    else if (Items[i].Quality < 50)
+                    else if (isLessThan50(item))
                     {
-                        Items[i].Quality++;
+                        item.Quality++;
                     }
                 }
             }
         }
+
 
     }
 }
