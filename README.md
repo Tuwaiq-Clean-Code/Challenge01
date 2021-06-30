@@ -10,6 +10,8 @@
 
 4- Long method
 
+5- Nested conditionals
+
 
 
 # Definition: 
@@ -31,12 +33,17 @@ It mean if you need to change something in one place in your code, you have to m
 
 The method we edit has too many responsibilities.
 
+5- Nested conditionals:
+
+ Nested if statements
+
+
 
 # Solution:
 
 The solution was by refactoring the code and replace the duplicate codes with functions to not repeat the code,
 Also making functions for every task, not one function for all tasks in the class to organize the code,
-And reduce the if statments.
+And reduce the nestedif statments.
 
 Easly doing updates on the application, and working as a group won't be a problem if the code was clean.
 
