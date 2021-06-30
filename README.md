@@ -1,3 +1,46 @@
+<div dir="rtl">
+
+  
+ # بيانات المتدرب:
+  
+  
+  معتز العجلان
+  
+  
+  المشرفة: 
+  
+  غادة المطيري
+  
+  
+  مجموعة السودة
+  
+  
+  
+  
+</div>
+
+  
+
+Code Smell: Duplicate code
+
+Definition: Copying the code and pasting it wherever needed.
+
+Solution: Extract the repeated code and make it into a function that can be called when needed.
+
+Code Smell: Long method
+
+Definition: A method contains large amount of code.
+
+Solution: Extract into another method which can be reused.
+
+Code Smell: Redundant if statments
+
+Definition: Avoidable and repeatable If else statements
+
+Solution: Refactor it into a better and cohesive logic.
+
+
+
 # Challenge 01
 
 ## *Step#1*
