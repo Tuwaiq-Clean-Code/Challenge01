@@ -14,12 +14,12 @@
 
 - README file contains:
 
-Code Smell:
+Code Smell: Excessively long line of code
 
-Definition: 
+Definition: A line of code which is too long, making the code difficult to read, understand, debug, refactor, or even identify possibilities of software reuse.
 
 Solution:
-
+refactoring the code by reducing the number of if statements.
 
 > p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
 

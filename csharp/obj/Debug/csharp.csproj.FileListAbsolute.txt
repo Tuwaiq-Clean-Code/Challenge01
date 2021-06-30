@@ -1,0 +1,16 @@
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\bin\Debug\csharp.exe.config
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\bin\Debug\csharp.exe
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\bin\Debug\csharp.pdb
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\bin\Debug\ApprovalTests.dll
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\bin\Debug\ApprovalUtilities.dll
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\bin\Debug\ApprovalUtilities.Net45.dll
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\bin\Debug\nunit.framework.dll
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\bin\Debug\ApprovalTests.xml
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\bin\Debug\ApprovalUtilities.xml
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\bin\Debug\ApprovalUtilities.Net45.xml
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\bin\Debug\nunit.framework.xml
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\obj\Debug\csharp.csprojAssemblyReference.cache
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\obj\Debug\csharp.csproj.CoreCompileInputs.cache
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\obj\Debug\csharp.csproj.CopyComplete
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\obj\Debug\csharp.exe
+C:\Users\rhm30\OneDrive\Desktop\Tuwiq\DP\PROJECTS\CleanCode\Challenge01\csharp\obj\Debug\csharp.pdb
