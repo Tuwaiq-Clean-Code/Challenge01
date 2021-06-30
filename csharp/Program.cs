@@ -8,7 +8,7 @@ namespace csharp
         public static void Main(string[] args)
         {
             Console.WriteLine("OMGHAI!");
-            IList<Item> Items = new List<Item>{
+            Item[] Items = new Item[]{
                 new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
                 new Item {Name = "Aged Brie", SellIn = 2, Quality = 0},
                 new Item {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7},
@@ -24,7 +24,7 @@ namespace csharp
             {
                 Console.WriteLine("-------- day " + i + " --------");
                 Console.WriteLine("name, sellIn, quality");
-                for (var j = 0; j < Items.Count; j++)
+                for (var j = 0; j < Items.Length; j++)
                 {
                     System.Console.WriteLine(Items[j]);
                 }

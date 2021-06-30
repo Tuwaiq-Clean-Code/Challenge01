@@ -20,3 +20,4 @@ C:\Users\Adel_Kalu\source\repos\Challenge01\csharp\obj\Debug\csharp.csproj.CoreC
 C:\Users\Adel_Kalu\source\repos\Challenge01\csharp\obj\Debug\csharp.csproj.CopyComplete
 C:\Users\Adel_Kalu\source\repos\Challenge01\csharp\obj\Debug\csharp.exe
 C:\Users\Adel_Kalu\source\repos\Challenge01\csharp\obj\Debug\csharp.pdb
+C:\Users\Adel_Kalu\source\repos\Challenge01\csharp\obj\Debug\csharp.csproj.AssemblyReference.cache

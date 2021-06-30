@@ -14,11 +14,25 @@
 
 - README file contains:
 
-Code Smell:
+Code Smell: Use Interface
 
-Definition: 
+Definition: we don't need it
 
-Solution:
+Solution: use array
+
+Code Smell: Long Method
+
+Definition: unnecessary code in a method
+
+Solution: remove unnecessary code
+
+Code Smell: Duplicate Code
+
+Definition: A piece of code that is repeatedly used
+
+Solution: remove one
+
+
 
 
 > p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
