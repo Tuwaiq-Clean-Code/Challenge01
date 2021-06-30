@@ -1,33 +1,13 @@
-# Challenge 01
+Code Smell: Long Method.
 
-## *Step#1*
+Definition: A method that contains too many lines of code.
 
-#### Go to **csharp**  -> **GildedRose.cs** -> `UpdateQuality()` function 
-
-
-## *Step#2*
-
-### **Challenge Requirement**
-
-#### find the code Smell in the function `UpdateQuality()` and Refactor the function.
-##### your repo should contain a README file and the refactored function.
-
-- README file contains:
-
-Code Smell:
-
-Definition: 
-
-Solution:
-
-
-> p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
+Solution: As a rule of thumb, if you feel the need to comment on something inside a method, you should take this code and put it in a new method. Even a single line can and should be split off into a separate method, if it requires explanations. And if the method has a descriptive name, nobody will need to look at the code to see what it does.
 
 ---
 
+Code Smell: Nested Conditional
 
-**recourse**: 
-- https://github.com/NotMyself/GildedRose
-- http://iamnotmyself.com/2011/02/14/refactor-this-the-gilded-rose-kata/
+Definition: You have a group of nested conditionals and it’s hard to determine the normal flow of code execution.
 
-> please make sure you fork this repo and submit your code as PR.🦾
+Solution: Isolate all special checks and edge cases into separate clauses and place them before the main checks. Ideally, you should have a “flat” list of conditionals, one after the other.
