@@ -5,85 +5,90 @@ namespace csharp
     public class GildedRose
     {
         IList<Item> Items;
+        
         public GildedRose(IList<Item> Items)
         {
             this.Items = Items;
         }
 
-        public void UpdateQuality()
+        public void Update()
         {
-            for (var i = 0; i < Items.Count; i++)
+            foreach (var item in Items)
             {
-                if (Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
+                UpdateSellIn(item);
+                UpdateQuality(item);
+            }
+        }
+
+        public void UpdateSellIn(Item item)
+        {
+            if (IsLegendaryItem(item))
+                return;
+
+            item.SellIn--;
+        }
+        
+        public void UpdateQuality(Item item)
+        {
+            if (item.SellIn < 0)
+            {
+                if (IsIncreasedByAge(item))
                 {
-                    if (Items[i].Quality > 0)
-                    {
-                        if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                        {
-                            Items[i].Quality = Items[i].Quality - 1;
-                        }
-                    }
+                    if (item.Quality >= 50)
+                        return;
+                    
+                    item.Quality++;
+                    return;
                 }
-                else
+                
+                if (item.Name != "Backstage passes to a TAFKAL80ETC concert" &&
+                    item.Quality > 0 &&
+                    !IsLegendaryItem(item))
                 {
-                    if (Items[i].Quality < 50)
-                    {
-                        Items[i].Quality = Items[i].Quality + 1;
-
-                        if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
-                        {
-                            if (Items[i].SellIn < 11)
-                            {
-                                if (Items[i].Quality < 50)
-                                {
-                                    Items[i].Quality = Items[i].Quality + 1;
-                                }
-                            }
-
-                            if (Items[i].SellIn < 6)
-                            {
-                                if (Items[i].Quality < 50)
-                                {
-                                    Items[i].Quality = Items[i].Quality + 1;
-                                }
-                            }
-                        }
-                    }
+                    item.Quality--;
+                    return;
                 }
 
-                if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
+                if (item.Name == "Backstage passes to a TAFKAL80ETC concert")
+                    item.Quality = 0;
+                
+                return;
+            }
+            
+            if (item.Name != "Aged Brie" &&
+                item.Name != "Backstage passes to a TAFKAL80ETC concert" &&
+                item.Quality > 0 &&
+                !IsLegendaryItem(item))
+            {
+                item.Quality--;
+            }
+            else if (item.Quality < 50)
+            {
+                item.Quality++;
+
+                if (item.Name != "Backstage passes to a TAFKAL80ETC concert")
+                    return;
+                    
+                if (item.SellIn < 11 && item.Quality < 50)
                 {
-                    Items[i].SellIn = Items[i].SellIn - 1;
+                    item.Quality++;
                 }
 
-                if (Items[i].SellIn < 0)
+                if (item.SellIn < 6 && item.Quality < 50)
                 {
-                    if (Items[i].Name != "Aged Brie")
-                    {
-                        if (Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
-                        {
-                            if (Items[i].Quality > 0)
-                            {
-                                if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                                {
-                                    Items[i].Quality = Items[i].Quality - 1;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            Items[i].Quality = Items[i].Quality - Items[i].Quality;
-                        }
-                    }
-                    else
-                    {
-                        if (Items[i].Quality < 50)
-                        {
-                            Items[i].Quality = Items[i].Quality + 1;
-                        }
-                    }
+                    item.Quality++;
                 }
             }
+        }
+        
+        private bool IsLegendaryItem(Item item)
+        {
+            return item.Name == "Sulfuras, Hand of Ragnaros";
+        }
+
+        private bool IsIncreasedByAge(Item item)
+        {
+            return item.Name == "Aged Brie";
         }
     }
 }
