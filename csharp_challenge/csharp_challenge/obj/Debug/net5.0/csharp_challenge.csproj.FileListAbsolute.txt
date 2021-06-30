@@ -1,0 +1,16 @@
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\bin\Debug\net5.0\csharp_challenge.exe
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\bin\Debug\net5.0\csharp_challenge.deps.json
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\bin\Debug\net5.0\csharp_challenge.runtimeconfig.json
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\bin\Debug\net5.0\csharp_challenge.runtimeconfig.dev.json
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\bin\Debug\net5.0\csharp_challenge.dll
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\bin\Debug\net5.0\ref\csharp_challenge.dll
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\bin\Debug\net5.0\csharp_challenge.pdb
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\obj\Debug\net5.0\csharp_challenge.csprojAssemblyReference.cache
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\obj\Debug\net5.0\csharp_challenge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\obj\Debug\net5.0\csharp_challenge.AssemblyInfoInputs.cache
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\obj\Debug\net5.0\csharp_challenge.AssemblyInfo.cs
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\obj\Debug\net5.0\csharp_challenge.csproj.CoreCompileInputs.cache
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\obj\Debug\net5.0\csharp_challenge.dll
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\obj\Debug\net5.0\ref\csharp_challenge.dll
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\obj\Debug\net5.0\csharp_challenge.pdb
+C:\Users\Taghr\source\repos\csharp_challenge\csharp_challenge\obj\Debug\net5.0\csharp_challenge.genruntimeconfig.cache
