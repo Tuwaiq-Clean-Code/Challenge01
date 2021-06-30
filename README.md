@@ -19,6 +19,11 @@ Code Smell:
 Definition: 
 
 Solution:
+Code smell | Definition | Solution 
+--- | --- | --- 
+**Dispensable** | **Duplicate Code:** Code blocks that are identical | Removing duplication
+**Bloaters** | **Long Method:** A method with too many lines of code | Extract Method refactoring technique
+
 
 
 > p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
