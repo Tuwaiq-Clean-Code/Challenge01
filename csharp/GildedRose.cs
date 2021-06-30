@@ -14,76 +14,109 @@ namespace csharp
         {
             for (var i = 0; i < Items.Count; i++)
             {
-                if (Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
+                if (isWrongName(Items[i].Name) && isQualityGraterThan0(Items[i].Quality))
                 {
-                    if (Items[i].Quality > 0)
-                    {
-                        if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                        {
-                            Items[i].Quality = Items[i].Quality - 1;
-                        }
-                    }
+                    decreaseQualityByOne(Items[i].Quality);
                 }
                 else
                 {
-                    if (Items[i].Quality < 50)
+                    if (isQualityLessThan50(Items[i].Quality))
                     {
-                        Items[i].Quality = Items[i].Quality + 1;
+                        increaseQualityByOne(Items[i].Quality);
 
-                        if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
+                        if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert" && isSellInLessThan11(Items[i].SellIn)  && isQualityLessThan50(Items[i].Quality))
                         {
-                            if (Items[i].SellIn < 11)
-                            {
-                                if (Items[i].Quality < 50)
-                                {
-                                    Items[i].Quality = Items[i].Quality + 1;
-                                }
-                            }
 
-                            if (Items[i].SellIn < 6)
+                            increaseQualityByOne(Items[i].Quality);
+
+                            if (  isSellInLessThan6(Items[i].SellIn) && isQualityLessThan50(Items[i].Quality))
                             {
-                                if (Items[i].Quality < 50)
-                                {
-                                    Items[i].Quality = Items[i].Quality + 1;
-                                }
+                                increaseQualityByOne(Items[i].Quality);
+                                
                             }
                         }
                     }
                 }
 
-                if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
+                if (isWrongName(Items[i].Name))
                 {
-                    Items[i].SellIn = Items[i].SellIn - 1;
+                    decreaseSellInByOne(Items[i].SellIn);
                 }
 
-                if (Items[i].SellIn < 0)
+                if (isSellInLessThan0(Items[i].SellIn))
                 {
-                    if (Items[i].Name != "Aged Brie")
+                    if (isWrongName(Items[i].Name) &&  isQualityGraterThan0(Items[i].Quality))
                     {
-                        if (Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
-                        {
-                            if (Items[i].Quality > 0)
-                            {
-                                if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                                {
-                                    Items[i].Quality = Items[i].Quality - 1;
-                                }
-                            }
-                        }
-                        else
-                        {
+
+                        decreaseQualityByOne(Items[i].Quality);
+
+
+                    }
+                        
+                     else
+                     {
                             Items[i].Quality = Items[i].Quality - Items[i].Quality;
-                        }
-                    }
-                    else
-                    {
-                        if (Items[i].Quality < 50)
+                     }
+                }
+                else
+                {
+                        if (isQualityLessThan50(Items[i].Quality))
                         {
-                            Items[i].Quality = Items[i].Quality + 1;
+                           increaseQualityByOne(Items[i].Quality);
                         }
-                    }
                 }
             }
         }
+
+        public static bool isWrongName(string Name)
+        {
+            return Name != "Aged Brie"
+            && Name != "Backstage passes to a TAFKAL80ETC concert"
+            && Name != "Sulfuras, Hand of Ragnaros";
+        }
+
+       public  int increaseQualityByOne(int qualityNumber)
+       {
+                return qualityNumber++;
+       }
+
+        public  int decreaseQualityByOne(int qualityNumber)
+        {
+            return qualityNumber--;
+        }
+
+
+        public  int decreaseSellInByOne(int SellInNumber)
+        {
+            return SellInNumber--;
+        }
+        public bool isQualityGraterThan0(int qualityNumber)
+        {
+            return qualityNumber > 0;
+        }
+        public bool isQualityLessThan50(int qualityNumber)
+        {
+            return qualityNumber < 50;
+        }
+
+
+        public bool isSellInLessThan0(int SellInNumber)
+        {
+            return SellInNumber < 0;
+        }
+
+
+        public bool isSellInLessThan11(int SellInNumber)
+        {
+            return SellInNumber < 11;
+        }
+
+        public bool isSellInLessThan6(int SellInNumber)
+        {
+            return SellInNumber < 6;
+        }
+
+
     }
 }
+
