@@ -1,33 +1,46 @@
 # Challenge 01
 
-## *Step#1*
 
-#### Go to **csharp**  -> **GildedRose.cs** -> `UpdateQuality()` function 
+Code Smell:  Long method (UpdateQuality()).
 
+Definition: method is long and can be divided into smaller methods .
 
-## *Step#2*
+Solution: taking out the parts of the method that can be brought out independently as IncreaseQuality() and DecreaseQuality(), then calling them from Update whenever needed.  
 
-### **Challenge Requirement**
+<hr/>
 
-#### find the code Smell in the function `UpdateQuality()` and Refactor the function.
-##### your repo should contain a README file and the refactored function.
+Code Smell:  unnecessary nested if statements 
 
-- README file contains:
+Definition: the method UpdateQuality() contains nested if statements.
 
-Code Smell:
+For example the following code:
+<pre><code>
+if (item.SellIn < 11)
+{
+    if (item.Quality < 50)
+    {
+        item.Quality = item.Quality + 1;
+    }
+}
 
-Definition: 
+if (item.SellIn < 6)
+{
+    if (item.Quality < 50)
+    {
+        item.Quality = item.Quality + 1;
+    }
+}
+</code></pre>
 
-Solution:
+Solution: The above example Can be simplfied to:
+<pre><code>
+if (item.SellIn < 11 && item.Quality < 50)
+{
+    item.Quality = item.Quality + 1;
+}
 
-
-> p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
-
----
-
-
-**recourse**: 
-- https://github.com/NotMyself/GildedRose
-- http://iamnotmyself.com/2011/02/14/refactor-this-the-gilded-rose-kata/
-
-> please make sure you fork this repo and submit your code as PR.🦾
+if (item.SellIn < 6 && item.Quality < 50)
+{
+        item.Quality = item.Quality + 1;
+}
+</code></pre>
