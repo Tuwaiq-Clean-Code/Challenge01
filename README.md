@@ -12,13 +12,15 @@
 #### find the code Smell in the function `UpdateQuality()` and Refactor the function.
 ##### your repo should contain a README file and the refactored function.
 
-- README file contains:
 
-Code Smell:
+### Code Smell:
+#### Duplicate code.
 
-Definition: 
+### Definition: 
+#### sequence of source code that occurs more than once.
 
-Solution:
+### Solution:
+#### fixed by moving the code into its own unit (function).
 
 
 > p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
