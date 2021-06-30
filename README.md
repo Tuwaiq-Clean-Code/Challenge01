@@ -43,7 +43,7 @@ The method we edit has too many responsibilities.
 
 The solution was by refactoring the code and replace the duplicate codes with functions to not repeat the code,
 Also making functions for every task, not one function for all tasks in the class to organize the code,
-And reduce the nestedif statments.
+And reduce the nested if statments.
 
 Easly doing updates on the application, and working as a group won't be a problem if the code was clean.
 
