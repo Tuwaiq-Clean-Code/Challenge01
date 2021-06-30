@@ -16,6 +16,16 @@ namespace csharp
             this.Items = Items;
         }
 
+        public int QualityDecrease(Item item)
+        {
+            return item.Quality = item.Quality - 1;
+        }
+
+        public int QualityIncrease(Item item)
+        {
+            return item.Quality = item.Quality + 1;
+        }
+
         public void UpdateQuality()
         {
             foreach (var item in Items)
@@ -23,7 +33,7 @@ namespace csharp
                 if (item.Name != AgedBrie && item.Name != BackstagePasses && item.Name != SulfurasHandOfRagnaros && item.Quality > 0)
                 {
 
-                    item.Quality = item.Quality - 1;
+                    QualityDecrease(item);
 
                 }
                 else
@@ -36,7 +46,7 @@ namespace csharp
                         {
                             if (item.SellIn < 11)
 
-                                item.Quality = item.Quality + 1;
+                                QualityIncrease(item);
 
                         }
 
@@ -55,7 +65,7 @@ namespace csharp
                     {
                         if (item.Name != BackstagePasses && item.Name != SulfurasHandOfRagnaros && item.Quality > 0)
 
-                            item.Quality = item.Quality - 1;
+                            QualityDecrease(item);
 
                         else
 
@@ -65,7 +75,7 @@ namespace csharp
                     {
                         if (item.Quality < 50)
 
-                            item.Quality = item.Quality + 1;
+                            QualityIncrease(item);
 
                     }
                 }
