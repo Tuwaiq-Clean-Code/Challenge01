@@ -16,10 +16,15 @@
 
 Code Smell:
 
+Arrow Code.
+
 Definition: 
+
+deep Nested if conditions
 
 Solution:
 
+Method extraction.
 
 > p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
 
