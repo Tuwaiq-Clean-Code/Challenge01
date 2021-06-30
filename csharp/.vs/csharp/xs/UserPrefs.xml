@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{176C0214-9136-4079-8DAB-11D7420C3881}|Default">
+  <MonoDevelop.Ide.ItemProperties.csharp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GildedRose.cs">
+    <Files>
+      <File FileName="Item.cs" />
+      <File FileName="GildedRose.cs" Line="27" Column="47" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="csharp" expanded="True">
+            <Node name="csharp" expanded="True">
+              <Node name="GildedRose.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
