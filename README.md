@@ -10,15 +10,21 @@
 ### **Challenge Requirement**
 
 #### find the code Smell in the function `UpdateQuality()` and Refactor the function.
-##### your repo should contain a README file and the refactored function.
 
-- README file contains:
+### **Challenge Solution**
 
 Code Smell:
 
-Definition: 
+- Long Method : a method that do multiple things
+- Duplicate Code : a repeated lines of code
+- Nested conditionals: conditionals that are nested in an unnecessary way
 
-Solution:
+
+Refactoring methods:
+
+- Extract Method
+- Preserve Whole Object
+- Replace nested conditional with guard clauses
 
 
 > p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
@@ -31,3 +37,14 @@ Solution:
 - http://iamnotmyself.com/2011/02/14/refactor-this-the-gilded-rose-kata/
 
 > please make sure you fork this repo and submit your code as PR.🦾
+
+<div align="right">
+
+### **اسم المتدرب : عبدالعزيز الاسمري**
+
+### **اسم المشرفة: غادة المطيري**
+
+### **اسم المجموعة: السودة**
+
+
+</div>
