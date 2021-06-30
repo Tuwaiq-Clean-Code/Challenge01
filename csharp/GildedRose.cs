@@ -16,44 +16,27 @@ namespace csharp
             {
                 if (Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
                 {
-                    if (Items[i].Quality > 0)
+                    if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
                     {
-                        if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                        {
-                            Items[i].Quality = Items[i].Quality - 1;
-                        }
+                        Items[i].Quality = DecreaseQuality(Items[i].Quality);
                     }
                 }
                 else
                 {
-                    if (Items[i].Quality < 50)
-                    {
-                        Items[i].Quality = Items[i].Quality + 1;
-
-                        if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
+                    Items[i].Quality = IncreaseQuality(Items[i].Quality);
+                    if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert" && Items[i].SellIn < 11)
                         {
-                            if (Items[i].SellIn < 11)
-                            {
-                                if (Items[i].Quality < 50)
-                                {
-                                    Items[i].Quality = Items[i].Quality + 1;
-                                }
-                            }
-
+                            Items[i].Quality = IncreaseQuality(Items[i].Quality);
                             if (Items[i].SellIn < 6)
                             {
-                                if (Items[i].Quality < 50)
-                                {
-                                    Items[i].Quality = Items[i].Quality + 1;
-                                }
+                            Items[i].Quality = IncreaseQuality(Items[i].Quality);
                             }
                         }
-                    }
                 }
 
                 if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
                 {
-                    Items[i].SellIn = Items[i].SellIn - 1;
+                    Items[i].SellIn--;
                 }
 
                 if (Items[i].SellIn < 0)
@@ -62,28 +45,37 @@ namespace csharp
                     {
                         if (Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
                         {
-                            if (Items[i].Quality > 0)
+                            if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
                             {
-                                if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                                {
-                                    Items[i].Quality = Items[i].Quality - 1;
-                                }
+                                Items[i].Quality = DecreaseQuality(Items[i].Quality);
                             }
                         }
                         else
                         {
-                            Items[i].Quality = Items[i].Quality - Items[i].Quality;
+                            Items[i].Quality = DecreaseQuality(Items[i].Quality, Items[i].Quality);
                         }
                     }
                     else
                     {
-                        if (Items[i].Quality < 50)
-                        {
-                            Items[i].Quality = Items[i].Quality + 1;
-                        }
+                       Items[i].Quality = IncreaseQuality(Items[i].Quality);
                     }
                 }
             }
         }
+        public int IncreaseQuality(int quality)
+        {
+            if (quality < 50)
+                return quality + 1;
+            
+                return quality;
+        }
+        public int DecreaseQuality(int quality, int amount = 1)
+        {
+            if (quality > 0)
+                return quality - amount;
+           
+                return quality;
+        }
+
     }
 }
