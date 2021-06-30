@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Obh6aXHjJHttzakhT5BtYzLABTPl2SDRfaFU/0eZXQc+lk2oQ9vrXIUOItgIvcDP0RUi60oDPLVux7tHASzvrw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Yasmin\\Documents\\.NET Bootcamp\\Clean Code\\Challenge01\\CleanCode\\Clean\\Clean.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Yasmin\\.nuget\\packages\\documentformat.openxml\\2.13.0\\documentformat.openxml.2.13.0.nupkg.sha512",
+    "C:\\Users\\Yasmin\\.nuget\\packages\\system.io.packaging\\4.7.0\\system.io.packaging.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
