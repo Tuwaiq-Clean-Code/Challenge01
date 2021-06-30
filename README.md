@@ -1,33 +1,41 @@
 # Challenge 01
 
-## *Step#1*
+## _Trainee info_
 
-#### Go to **csharp**  -> **GildedRose.cs** -> `UpdateQuality()` function 
-
-
-## *Step#2*
-
-### **Challenge Requirement**
-
-#### find the code Smell in the function `UpdateQuality()` and Refactor the function.
-##### your repo should contain a README file and the refactored function.
-
-- README file contains:
-
-Code Smell:
-
-Definition: 
-
-Solution:
-
-
-> p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
+**_Name:_** Abdulaziz Almohammadi
 
 ---
 
+## _Code Smells and Definitions_
 
-**recourse**: 
+<br/>
+Code Smell: Long Method <br/>
+Definition: too much coding <br/>
+Solution: refactoring and delete unneccsery code <br/>
+<br/>
+Code Smell: Duplicate Code <br/>
+Definition: Duplicat code and use it everywhere <br/>
+Solution: separate it in another function <br/>
+<br/>
+Code Smell: Arrow of if <br/>
+Definition: too many nasted if make it like arrow <br/>
+Solution: make it one <br/>
+
+<br/>
+Code Smell: spaghetti code <br/>
+Definition: the code that you can read it <br/>
+Solution: make it one <br/>
+<br/>
+
+---
+
+## _Result_
+
+from **_76 line_** of code for the function to **_30 line_**
+
+---
+
+**recourse**:
+
 - https://github.com/NotMyself/GildedRose
 - http://iamnotmyself.com/2011/02/14/refactor-this-the-gilded-rose-kata/
-
-> please make sure you fork this repo and submit your code as PR.🦾
