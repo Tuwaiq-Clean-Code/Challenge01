@@ -1,6 +1,7 @@
 
 
 The Code Smell are:
+
 1- Duplicate Code
 2- Bloaters
 3- Change Preventers
@@ -8,6 +9,7 @@ The Code Smell are:
 
 
 Definition: 
+
 1- Duplicate Code : Don’t repeat yourself the code shoud not be Duplicated in the function instead you can do one 
 function and call it so when you fix the code you dont have to search through the code just change the method.
 2- Bloaters : Methods and classes that have increased to such proportions that they are hard to work with.
@@ -15,6 +17,7 @@ function and call it so when you fix the code you dont have to search through th
 4- Long method : The method we edit has too many responsibilities.
 
 Solution:
+
 The solution was by refactoring the code and replace the duplicate codes with functions to not repeat the code.
 Also making functions for every task, not one function for all tasks in the class to organize the code. 
 Easly doing updates on the application, and working as a group won't be a problem if the code was clean.
