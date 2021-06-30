@@ -4,21 +4,21 @@ namespace csharp
 {
     public class GildedRose
     {
-        IList<Item> Items;
-        public GildedRose(IList<Item> Items)
+        Item[] Items;
+        public GildedRose(Item[] Items)
         {
             this.Items = Items;
         }
 
         public void UpdateQuality()
         {
-            for (var i = 0; i < Items.Count; i++)
+            for (var i = 0; i < Items.Length; i++)
             {
-                if (Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
+                if (!Items[i].Name.Equals("Aged Brie") && !Items[i].Name.Equals("Backstage passes to a TAFKAL80ETC concert"))
                 {
                     if (Items[i].Quality > 0)
                     {
-                        if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
+                        if (!Items[i].Name.Equals("Sulfuras, Hand of Ragnaros"))
                         {
                             Items[i].Quality = Items[i].Quality - 1;
                         }
@@ -30,7 +30,7 @@ namespace csharp
                     {
                         Items[i].Quality = Items[i].Quality + 1;
 
-                        if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
+                        if (Items[i].Name.Equals("Backstage passes to a TAFKAL80ETC concert"))
                         {
                             if (Items[i].SellIn < 11)
                             {
@@ -42,29 +42,29 @@ namespace csharp
 
                             if (Items[i].SellIn < 6)
                             {
-                                if (Items[i].Quality < 50)
+                /*                if (Items[i].Quality < 50)
                                 {
                                     Items[i].Quality = Items[i].Quality + 1;
-                                }
+                                }*/
                             }
                         }
                     }
                 }
 
-                if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
+                if (!Items[i].Name.Equals("Sulfuras, Hand of Ragnaros"))
                 {
                     Items[i].SellIn = Items[i].SellIn - 1;
                 }
 
                 if (Items[i].SellIn < 0)
                 {
-                    if (Items[i].Name != "Aged Brie")
+                    if (!Items[i].Name.Equals("Aged Brie"))
                     {
-                        if (Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
+                        if (!Items[i].Name.Equals("Backstage passes to a TAFKAL80ETC concert"))
                         {
                             if (Items[i].Quality > 0)
                             {
-                                if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
+                                if (!Items[i].Name.Equals("Sulfuras, Hand of Ragnaros"))
                                 {
                                     Items[i].Quality = Items[i].Quality - 1;
                                 }
@@ -72,7 +72,7 @@ namespace csharp
                         }
                         else
                         {
-                            Items[i].Quality = Items[i].Quality - Items[i].Quality;
+                            Items[i].Quality = 0;
                         }
                     }
                     else
