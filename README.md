@@ -33,7 +33,7 @@ It mean if you need to change something in one place in your code, you have to m
 
 The method we edit has too many responsibilities.
 
-5- Nested conditionals:
+5- Nested conditionals :
 
  Nested if statements
 
