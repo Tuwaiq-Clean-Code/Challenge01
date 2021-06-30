@@ -40,7 +40,7 @@ namespace csharp
                                 }
                             }
 
-                            if (Items[i].SellIn < 6)
+                            else if (Items[i].SellIn < 6)
                             {
                                 if (Items[i].Quality < 50)
                                 {
