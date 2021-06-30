@@ -1,33 +1,30 @@
+<div dir="ltr" align="center">
+
+![Tuwaiq](https://i.ibb.co/SV2BSn5/tuwaiq.png)
+
+</div>
+
+<hr />
+
 # Challenge 01
 
-## *Step#1*
-
-#### Go to **csharp**  -> **GildedRose.cs** -> `UpdateQuality()` function 
+`UpdateQuality()` function 
 
 
-## *Step#2*
+- **Code smell:** Long method caused by duplicated code.
+- **Definition:** A method contains too many lines of code.
+- **Solution:** Refactoring it and reduce duplicated code by creating a function and keep reusing it.
 
-### **Challenge Requirement**
+<hr />
+<br />
 
-#### find the code Smell in the function `UpdateQuality()` and Refactor the function.
-##### your repo should contain a README file and the refactored function.
+### <b> By:</b>  Mohammed Rashed Albalawi.
 
-- README file contains:
+<br />
 
-Code Smell:
-
-Definition: 
-
-Solution:
-
-
-> p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
-
----
-
-
-**recourse**: 
+## Resource: 
 - https://github.com/NotMyself/GildedRose
 - http://iamnotmyself.com/2011/02/14/refactor-this-the-gilded-rose-kata/
 
-> please make sure you fork this repo and submit your code as PR.🦾
+
+
