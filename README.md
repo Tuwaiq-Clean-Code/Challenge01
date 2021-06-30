@@ -7,21 +7,13 @@
 
 ## *Step#2*
 
-### **Challenge Requirement**
 
-#### find the code Smell in the function `UpdateQuality()` and Refactor the function.
-##### your repo should contain a README file and the refactored function.
-
-- README file contains:
-
-Code Smell:
-
-Definition: 
+### Code Smell:
+Long function,Duplicated Code
 
 Solution:
 
-
-> p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
+separated long method to small functions, and remove duplicates.
 
 ---
 
