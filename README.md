@@ -1,33 +1,9 @@
 # Challenge 01
+محاولة استخدام مفهوم ال clean code على هذا المثال ، لاحظنا وجود عدد كبير من ال if statments  والتي يمكن تقليلها الى عدد اقل بنفس الشروط المطلوبه بعد تحليلها .
 
-## *Step#1*
+## code smell : 
+alot of if's
+## solution : 
+minmize if's number 
 
-#### Go to **csharp**  -> **GildedRose.cs** -> `UpdateQuality()` function 
-
-
-## *Step#2*
-
-### **Challenge Requirement**
-
-#### find the code Smell in the function `UpdateQuality()` and Refactor the function.
-##### your repo should contain a README file and the refactored function.
-
-- README file contains:
-
-Code Smell:
-
-Definition: 
-
-Solution:
-
-
-> p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
-
----
-
-
-**recourse**: 
-- https://github.com/NotMyself/GildedRose
-- http://iamnotmyself.com/2011/02/14/refactor-this-the-gilded-rose-kata/
-
-> please make sure you fork this repo and submit your code as PR.🦾
+![Image from iOS](https://user-images.githubusercontent.com/82523761/123862941-a5031680-d931-11eb-8c65-a526de7df643.jpg)
