@@ -14,11 +14,11 @@
 
 - README file contains:
 
-Code Smell:
+Code Smell: duplicate code 
 
-Definition: 
+Definition: using the same code many times
 
-Solution:
+Solution: replace the duplicate code with functions
 
 
 > p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
