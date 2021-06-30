@@ -29,7 +29,7 @@ namespace csharp
             }
         }
 
-        private void UpdateQualityForItemsThatAgeWell(int i)
+        private void UpdateQualityForItems(int i)
         {
             IncrementQuality(i);
             if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
@@ -74,7 +74,7 @@ namespace csharp
                 }
                 else
                 {              
-                    UpdateQualityForItemsThatAgeWell(i);
+                    UpdateQualityForItems(i);
                 }
                 
                 if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
