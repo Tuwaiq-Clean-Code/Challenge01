@@ -14,14 +14,22 @@
 
 # Definition: 
 
-1- Duplicate Code : Don’t repeat yourself the code shoud not be Duplicated in the function instead you can do one 
+1- Duplicate Code :
+
+Don’t repeat yourself the code shoud not be Duplicated in the function instead you can do one 
 function and call it so when you fix the code you dont have to search through the code just change the method.
 
-2- Bloaters : Methods and classes that have increased to such proportions that they are hard to work with.
+2- Bloaters :
 
-3- Change Preventers : It mean if you need to change something in one place in your code, you have to make many changes in other places too.
+Methods and classes that have increased to such proportions that they are hard to work with.
 
-4- Long method : The method we edit has too many responsibilities.
+3- Change Preventers : 
+
+It mean if you need to change something in one place in your code, you have to make many changes in other places too.
+
+4- Long method : 
+
+The method we edit has too many responsibilities.
 
 
 # Solution:
