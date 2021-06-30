@@ -29,7 +29,7 @@ namespace csharp
                         Items[i].Quality = Items[i].Quality - Items[i].Quality;
                     }
                 }
-                else if (Items[i].SellIn < 50 && Items[i].Quality < 50 && (Items[i].Name != "Aged Brie" && Items[i].Name != "Sulfuras, Hand of Ragnaros")
+                else if (Items[i].SellIn < 50 && Items[i].Quality < 50 && (Items[i].Name != "Aged Brie" && Items[i].Name != "Sulfuras, Hand of Ragnaros"))
                 {
                     Items[i].Quality = Items[i].Quality + 1;
                 }
