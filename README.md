@@ -1,6 +1,6 @@
 
 
-# The Code Smell are:
+# The Code Smells are:
 
 1- Duplicate Code
 
