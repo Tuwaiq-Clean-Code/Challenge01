@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 
+
 namespace csharp
 {
     public class GildedRose
@@ -12,77 +13,69 @@ namespace csharp
 
         public void UpdateQuality()
         {
+
             for (var i = 0; i < Items.Count; i++)
             {
-                if (Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
+                bool isItemAged = Items[i].Name == "Aged Brie";
+                bool isItemSulfuras = Items[i].Name == "Sulfuras, Hand of Ragnaros";
+                bool isItemBackstagePass = Items[i].Name == "Backstage passes to a TAFKAL80ETC concert";
+                bool isItemNormal = Items[i].Name == "+5 Dexterity Vest" || Items[i].Name == "Elixir of the Mongoose";
+                bool isItemConjured = Items[i].Name == "Conjured Mana Cake";
+                bool isSellInLessThan11 = Items[i].SellIn < 11;
+                bool isSellInLessThan6 = Items[i].SellIn < 6;
+
+
+                if (isItemSulfuras)
                 {
-                    if (Items[i].Quality > 0)
-                    {
-                        if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                        {
-                            Items[i].Quality = Items[i].Quality - 1;
-                        }
-                    }
+                    continue;
                 }
-                else
+
+                Items[i].SellIn = Items[i].SellIn - 1;
+
+                if (isItemBackstagePass)
                 {
+                    if(Items[i].SellIn <= 0)
+                    {
+                        Items[i].Quality = 0;
+                    }
+                    else if (isSellInLessThan6)
+                    {
+                        Items[i].Quality = Items[i].Quality + 2;
+                    }
+                    else if (isSellInLessThan11)
+                    {
+                        Items[i].Quality = Items[i].Quality + 3;
+                    }
+                    else ++ Items[i].Quality;
+                }
+
+                else if (isItemAged)
+                {
+                    
                     if (Items[i].Quality < 50)
                     {
-                        Items[i].Quality = Items[i].Quality + 1;
-
-                        if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
-                        {
-                            if (Items[i].SellIn < 11)
-                            {
-                                if (Items[i].Quality < 50)
-                                {
-                                    Items[i].Quality = Items[i].Quality + 1;
-                                }
-                            }
-
-                            if (Items[i].SellIn < 6)
-                            {
-                                if (Items[i].Quality < 50)
-                                {
-                                    Items[i].Quality = Items[i].Quality + 1;
-                                }
-                            }
-                        }
+                        ++Items[i].Quality;
+                        if(Items[i].SellIn < 0)
+                            ++Items[i].Quality;
                     }
                 }
 
-                if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
+                else if (isItemConjured)
                 {
-                    Items[i].SellIn = Items[i].SellIn - 1;
+                    if (Items[i].Quality > 0)
+                        Items[i].Quality -= 2;
                 }
 
-                if (Items[i].SellIn < 0)
+                else if (isItemNormal )
                 {
-                    if (Items[i].Name != "Aged Brie")
+                    if(Items[i].Quality > 0)
                     {
-                        if (Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
-                        {
-                            if (Items[i].Quality > 0)
-                            {
-                                if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                                {
-                                    Items[i].Quality = Items[i].Quality - 1;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            Items[i].Quality = Items[i].Quality - Items[i].Quality;
-                        }
+                        --Items[i].Quality;
                     }
-                    else
-                    {
-                        if (Items[i].Quality < 50)
-                        {
-                            Items[i].Quality = Items[i].Quality + 1;
-                        }
-                    }
+                    
                 }
+                else throw new System.NotSupportedException($"{Items[i].Name} is Unknown type");
+
             }
         }
     }
