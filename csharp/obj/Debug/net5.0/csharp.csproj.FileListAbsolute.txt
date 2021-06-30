@@ -1,0 +1,32 @@
+C:\Users\Pivot85\source\repos\csharp\obj\Debug\net5.0\csharp.csproj.AssemblyReference.cache
+C:\Users\Pivot85\source\repos\csharp\obj\Debug\net5.0\csharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pivot85\source\repos\csharp\obj\Debug\net5.0\csharp.AssemblyInfoInputs.cache
+C:\Users\Pivot85\source\repos\csharp\obj\Debug\net5.0\csharp.AssemblyInfo.cs
+C:\Users\Pivot85\source\repos\csharp\obj\Debug\net5.0\csharp.csproj.CoreCompileInputs.cache
+C:\Users\Pivot85\source\repos\csharp\bin\Debug\net5.0\csharp.exe
+C:\Users\Pivot85\source\repos\csharp\bin\Debug\net5.0\csharp.deps.json
+C:\Users\Pivot85\source\repos\csharp\bin\Debug\net5.0\csharp.runtimeconfig.json
+C:\Users\Pivot85\source\repos\csharp\bin\Debug\net5.0\csharp.runtimeconfig.dev.json
+C:\Users\Pivot85\source\repos\csharp\bin\Debug\net5.0\csharp.dll
+C:\Users\Pivot85\source\repos\csharp\bin\Debug\net5.0\ref\csharp.dll
+C:\Users\Pivot85\source\repos\csharp\bin\Debug\net5.0\csharp.pdb
+C:\Users\Pivot85\source\repos\csharp\obj\Debug\net5.0\csharp.dll
+C:\Users\Pivot85\source\repos\csharp\obj\Debug\net5.0\ref\csharp.dll
+C:\Users\Pivot85\source\repos\csharp\obj\Debug\net5.0\csharp.pdb
+C:\Users\Pivot85\source\repos\csharp\obj\Debug\net5.0\csharp.genruntimeconfig.cache
+C:\Users\Pivot85\Desktop\New folder\csharp\obj\Debug\net5.0\csharp.csproj.AssemblyReference.cache
+C:\Users\Pivot85\Desktop\New folder\csharp\obj\Debug\net5.0\csharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pivot85\Desktop\New folder\csharp\obj\Debug\net5.0\csharp.AssemblyInfoInputs.cache
+C:\Users\Pivot85\Desktop\New folder\csharp\obj\Debug\net5.0\csharp.AssemblyInfo.cs
+C:\Users\Pivot85\Desktop\New folder\csharp\obj\Debug\net5.0\csharp.csproj.CoreCompileInputs.cache
+C:\Users\Pivot85\Desktop\New folder\csharp\obj\Debug\net5.0\csharp.dll
+C:\Users\Pivot85\Desktop\New folder\csharp\obj\Debug\net5.0\ref\csharp.dll
+C:\Users\Pivot85\Desktop\New folder\csharp\obj\Debug\net5.0\csharp.pdb
+C:\Users\Pivot85\Desktop\New folder\csharp\bin\Debug\net5.0\csharp.exe
+C:\Users\Pivot85\Desktop\New folder\csharp\bin\Debug\net5.0\csharp.deps.json
+C:\Users\Pivot85\Desktop\New folder\csharp\bin\Debug\net5.0\csharp.runtimeconfig.json
+C:\Users\Pivot85\Desktop\New folder\csharp\bin\Debug\net5.0\csharp.runtimeconfig.dev.json
+C:\Users\Pivot85\Desktop\New folder\csharp\bin\Debug\net5.0\csharp.dll
+C:\Users\Pivot85\Desktop\New folder\csharp\bin\Debug\net5.0\ref\csharp.dll
+C:\Users\Pivot85\Desktop\New folder\csharp\bin\Debug\net5.0\csharp.pdb
+C:\Users\Pivot85\Desktop\New folder\csharp\obj\Debug\net5.0\csharp.genruntimeconfig.cache
