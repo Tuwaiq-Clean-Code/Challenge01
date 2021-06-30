@@ -1,33 +1,69 @@
 # Challenge 01
 
-## *Step#1*
-
-#### Go to **csharp**  -> **GildedRose.cs** -> `UpdateQuality()` function 
-
-
-## *Step#2*
-
-### **Challenge Requirement**
-
-#### find the code Smell in the function `UpdateQuality()` and Refactor the function.
-##### your repo should contain a README file and the refactored function.
-
-- README file contains:
 
 Code Smell:
 
+``` 
+if (Items[i].Quality < 50)
+                    {
+                        Items[i].Quality = Items[i].Quality + 1;
+
+                        if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
+                        {
+                            if (Items[i].SellIn < 11)
+                            {
+                                if (Items[i].Quality < 50)
+                                {
+                                    Items[i].Quality = Items[i].Quality + 1;
+                                }
+                            }
+
+                            if (Items[i].SellIn < 6)
+                            {
+                                if (Items[i].Quality < 50)
+                                {
+                                    Items[i].Quality = Items[i].Quality + 1;
+                                }
+                            }
+                        }
+                    }
+```
 Definition: 
+duplicate code
 
 Solution:
+Delete unnecessary if statement 
+```
+if (Items[i].Quality < 50)
+                    {
+                        Items[i].Quality = Items[i].Quality + 1;
 
+                        if (Items[i].Name == "Backstage passes to a TAFKAL80ETC concert")
+                        {
+                            if (Items[i].SellIn < 11)
+                            {
+                                Items[i].Quality = Items[i].Quality + 1;
+                            }
+                        }
+                    }
+```
+<hr/>
 
-> p.s. your refactored function have to work just like how the old `UpdateQuality()` function was working
+Code Smell:
+```  
+if (Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert") 
+```
+Definition:
+Long code 
 
----
+Solution:
+```
+public static bool CheckName(name)
+        {
+            return (name != "Aged Brie" && name != "Backstage passes to a TAFKAL80ETC concert")
+        }
+```
+```
+ if (CheckName(Items[i].Name))
+```
 
-
-**recourse**: 
-- https://github.com/NotMyself/GildedRose
-- http://iamnotmyself.com/2011/02/14/refactor-this-the-gilded-rose-kata/
-
-> please make sure you fork this repo and submit your code as PR.🦾
