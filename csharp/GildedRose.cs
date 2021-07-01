@@ -4,7 +4,6 @@ namespace csharp
 {
     public class GildedRose
     {
-
         public const string BackstagePasses = "Backstage passes to a TAFKAL80ETC concert";
         public const string AgedBrie = "Aged Brie";
         public const string SulfurasHandOfRagnaros = "Sulfuras, Hand of Ragnaros";
@@ -18,12 +17,12 @@ namespace csharp
 
         public int QualityDecrease(Item item)
         {
-            return item.Quality = item.Quality - 1;
+            return item.Quality-= 1;
         }
 
         public int QualityIncrease(Item item)
         {
-            return item.Quality = item.Quality + 1;
+            return item.Quality+= 1;
         }
 
         public void UpdateQuality()
@@ -32,9 +31,7 @@ namespace csharp
             {
                 if (item.Name != AgedBrie && item.Name != BackstagePasses && item.Name != SulfurasHandOfRagnaros && item.Quality > 0)
                 {
-
                     QualityDecrease(item);
-
                 }
                 else
                 {
@@ -47,10 +44,7 @@ namespace csharp
                             if (item.SellIn < 11)
 
                                 QualityIncrease(item);
-
                         }
-
-
                     }
                 }
 
@@ -66,7 +60,6 @@ namespace csharp
                         if (item.Name != BackstagePasses && item.Name != SulfurasHandOfRagnaros && item.Quality > 0)
 
                             QualityDecrease(item);
-
                         else
 
                             item.Quality = item.Quality - item.Quality;
@@ -75,7 +68,7 @@ namespace csharp
                     {
                         if (item.Quality < 50)
 
-                            QualityIncrease(item);
+                        QualityIncrease(item);
 
                     }
                 }
@@ -83,5 +76,5 @@ namespace csharp
         }
     }
 
-    }
+  }
 
