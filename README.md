@@ -50,6 +50,7 @@ Easly doing updates on the application, and working as a group won't be a proble
 
 
 ---
+[![BCH compliance](https://bettercodehub.com/edge/badge/NadaAlOtaibi/Challenge01?branch=main)](https://bettercodehub.com/)
 
 
 **recourse**: 
