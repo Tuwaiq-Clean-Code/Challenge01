@@ -42,10 +42,10 @@ namespace csharp
 
                             if (Items[i].SellIn < 6)
                             {
-                /*                if (Items[i].Quality < 50)
+                                if (Items[i].Quality < 50)
                                 {
                                     Items[i].Quality = Items[i].Quality + 1;
-                                }*/
+                                }
                             }
                         }
                     }
