@@ -17,12 +17,10 @@ namespace csharp
             else 
                 return false;
         }
-
         public bool isLessThanFifty(int number)
         {
             return number < 50;
         }
-
         public bool isPositiveNumber(int number)
         {
             return number > 0;
@@ -32,15 +30,11 @@ namespace csharp
         {
             foreach (var item in Items)
             {
-                bool isValidString = isStringAllowed(item.Name);
-                bool isPositive = isPositiveNumber(item.Quality);
-                bool isLessThan50 = isLessThanFifty(item.Quality);
-
-                if (isValidString && isPositive)
+                if (isStringAllowed(item.Name) && isPositiveNumber(item.Quality))
                 {
                     item.Quality--;
                 }
-                else if (isLessThan50)
+                else if (isLessThanFifty(item.Quality))
                 {
                     item.Quality++;
                     
@@ -48,23 +42,25 @@ namespace csharp
                         && item.Name == "Backstage passes to a TAFKAL80ETC concert")
                         item.Quality++;
                 }
-
                 if (item.Name != "Sulfuras, Hand of Ragnaros")
                 {
                     item.SellIn--;
                 }
-
                 if (!isPositiveNumber(item.SellIn) && isPositiveNumber(item.Quality) )
                 {
-                    if(item.Name == "Sulfuras, Hand of Ragnaros")
-                        item.Quality = item.Quality - item.Quality;
-
-                    else if(isValidString)
-                        item.Quality--;
-                    else if(isLessThanFifty(item.Quality))
-                        item.Quality++;
+                    NegativeSellInAndPositiveQuality(item);
                 }
             }
+        }
+        public void NegativeSellInAndPositiveQuality(Item item)
+        {
+            if (item.Name == "Sulfuras, Hand of Ragnaros")
+                item.Quality -= item.Quality;
+
+            else if (isStringAllowed(item.Name))
+                item.Quality--;
+            else if (isLessThanFifty(item.Quality))
+                item.Quality++;
         }
     }
 }
