@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace csharp
 {
@@ -42,10 +43,7 @@ namespace csharp
 
                         if (isLessThanFifty(item.Quality) && item.Name == "Backstage passes to a TAFKAL80ETC concert")
                         {
-                            if (item.SellIn < 6)
-                                item.Quality += 2;
-                            else if (item.SellIn < 11)
-                                item.Quality += 1;
+                            item.SellIn = IncrementSellIn(item.SellIn);
                         }
                     }
                 }
@@ -71,5 +69,14 @@ namespace csharp
             }
         }
 
+        private int IncrementSellIn(int sellIn)
+        {
+            if (sellIn < 6)
+                return sellIn += 2;
+            else if (sellIn < 11)
+                return sellIn += 1;
+
+            return sellIn;
+        }
     }
 }
