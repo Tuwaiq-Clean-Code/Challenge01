@@ -31,3 +31,4 @@ Solution:
 - http://iamnotmyself.com/2011/02/14/refactor-this-the-gilded-rose-kata/
 
 > please make sure you fork this repo and submit your code as PR.🦾
+> [![BCH compliance](https://bettercodehub.com/edge/badge/Rahaf-Alqhtani/Challenge01?branch=main)](https://bettercodehub.com/) 
