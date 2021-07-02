@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\bin\Debug\net5.0\CSharpCleanCode.exe
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\bin\Debug\net5.0\CSharpCleanCode.deps.json
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\bin\Debug\net5.0\CSharpCleanCode.runtimeconfig.json
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\bin\Debug\net5.0\CSharpCleanCode.runtimeconfig.dev.json
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\bin\Debug\net5.0\CSharpCleanCode.dll
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\bin\Debug\net5.0\ref\CSharpCleanCode.dll
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\bin\Debug\net5.0\CSharpCleanCode.pdb
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\obj\Debug\net5.0\CSharpCleanCode.csprojAssemblyReference.cache
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\obj\Debug\net5.0\CSharpCleanCode.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\obj\Debug\net5.0\CSharpCleanCode.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\obj\Debug\net5.0\CSharpCleanCode.AssemblyInfo.cs
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\obj\Debug\net5.0\CSharpCleanCode.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\obj\Debug\net5.0\CSharpCleanCode.dll
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\obj\Debug\net5.0\ref\CSharpCleanCode.dll
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\obj\Debug\net5.0\CSharpCleanCode.pdb
+C:\Users\user\Desktop\CSharpChallenge\Challenge01\CSharpCleanCode\obj\Debug\net5.0\CSharpCleanCode.genruntimeconfig.cache

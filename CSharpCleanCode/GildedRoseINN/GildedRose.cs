@@ -1,10 +1,23 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace csharp
+namespace CSharpCleanCode.GildedRoseINN
 {
     public class GildedRose
     {
         IList<Item> Items;
+
+        protected NewDayNotifier NewDayNotifier = new NewDayNotifier();
+
+        public GildedRose(IList<BaseItem> Items)
+        {
+            this.Items = Items as IList<Item>;
+            this.NewDayNotifier.AttachRange(Items as IEnumerable<INewDayEnterable>);
+        }
+
         public GildedRose(IList<Item> Items)
         {
             this.Items = Items;
@@ -84,6 +97,10 @@ namespace csharp
                     }
                 }
             }
+        }
+        public void RefactoredUpdateQuality()
+        {
+            NewDayNotifier.NotifyAll();
         }
     }
 }
