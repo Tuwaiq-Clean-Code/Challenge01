@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using csharp.Models;
+using csharp.Repositories;
+using NUnit.Framework;
 using System.Collections.Generic;
 
 namespace csharp.Tests
@@ -9,10 +11,17 @@ namespace csharp.Tests
         [Test]
         public void foo()
         {
-            IList<Item> Items = new List<Item> { new Item { Name = "foo", SellIn = 0, Quality = 0 } };
-            GildedRose app = new GildedRose(Items);
+            IItemRepository itemRepository = new ItemRepository();
+
+            IList<Item> items = itemRepository.GetAll();
+
+            string itemName = items[0].Name;
+            
+            GildedRose app = new GildedRose(items);
+
             app.UpdateQuality();
-            Assert.AreEqual("fixme", Items[0].Name);
+            
+            Assert.AreEqual(itemName, items[0].Name);
         }
     }
 }
